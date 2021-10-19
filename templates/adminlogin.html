@@ -1,0 +1,13 @@
+
+{% extends "index.html" %}
+
+{% block content %}
+<div class="login-block">
+ <h1>Login</h1>
+    <form action="{{ url_for('adminlogin') }}" method="post">
+    <input type="text" name = "user" value="" placeholder="Username" id="username" />
+    <input type="password"  name = "pass" value="" placeholder="Password" id="password" />
+    <button>Submit</button>
+    </form>
+</div>
+{% endblock %}

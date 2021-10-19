@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+{% for item in data %}
+<ul>
+    <li style="color:white;" >{{item.rating}}</li>
+    <li style="color:white;" >{{item.review_str}}</li>
+</ul>
+{% endfor %}
+
+
+{% endblock %}
