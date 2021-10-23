@@ -8,7 +8,8 @@
   </head>
   <body>
   {% block content %}
-  <form name="fform" action="{{ url_for('submit',reviews=text) }}" method="post">
+  <h1 style="color:white;" align="middle">How was your internship Experience ?</h1>
+  <form name="fform" action="{{ url_for('submit') }}" method="post">
 
     <div class="container">
       <div class="post">
@@ -16,17 +17,17 @@
         <div class="edit">EDIT</div>
       </div>
       <div class="star-widget">
- <input type="radio" name="rate" value="1" id="rate-5">
+ <input type="radio" name="rate" value="5" id="rate-5">
         <label for="rate-5" class="fas fa-star"></label>
-        <input type="radio" name="rate" value="2" id="rate-4">
+        <input type="radio" name="rate" value="4" id="rate-4">
         <label for="rate-4" class="fas fa-star"></label>
         <input type="radio" name="rate" value="3" id="rate-3">
         <label for="rate-3" class="fas fa-star"></label>
-        <input type="radio" name="rate" value="4" id="rate-2">
+        <input type="radio" name="rate" value="2" id="rate-2">
         <label for="rate-2" class="fas fa-star"></label>
-        <input type="radio" name="rate" value="5" id="rate-1">
+        <input type="radio" name="rate" value="1" id="rate-1">
         <label for="rate-1" class="fas fa-star"></label>
-
+<br><br>
           <header></header>
           <div class="textarea">
             <textarea name="text" cols="30" placeholder="Describe your experience.." ></textarea>
