@@ -27,8 +27,11 @@ def home():
 @app.route("/submit", methods=['GET', 'POST'])
 def submit():
     if request.method == "POST":
+
         Review = request.form["text"]
-        dreview = review(rating=0, review_str=Review)
+        rating = request.form.getlist("rate")
+        rating = int(rating[0])
+        dreview = review(rating=rating, review_str=Review)
         db.session.add(dreview)
         db.session.commit()
 
