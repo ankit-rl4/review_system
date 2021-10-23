@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime
 
+now = datetime.now()
 app = Flask(__name__)
 app.static_folder = 'static'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///ankit.sqlite3'
@@ -13,10 +15,12 @@ class review(db.Model):
     _id = db.Column(db.Integer, primary_key=True)
     rating = db.Column(db.Integer)
     review_str = db.Column(db.String(300))
+    time = db.Column(db.String(300))
 
-    def __init_(self, rating, review_str):
+    def __init_(self, rating, review_str,time):
         self.rating = rating
         self.review_str = review_str
+        self.time=time
 
 
 @app.route("/")
@@ -30,8 +34,9 @@ def submit():
 
         Review = request.form["text"]
         rating = request.form.getlist("rate")
+        dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
         rating = int(rating[0])
-        dreview = review(rating=rating, review_str=Review)
+        dreview = review(rating=rating, review_str=Review,time=dt_string)
         db.session.add(dreview)
         db.session.commit()
 
