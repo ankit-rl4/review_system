@@ -1,12 +1,16 @@
 {% extends "index.html" %}
 
 {% block content %}
-
+<h1 align="middle" style="color:white">Reviews :-</h1>
 {% for item in data %}
-<ul>
-    <li style="color:white;" >{{item.rating}}</li>
-    <li style="color:white;" >{{item.review_str}}</li>
-</ul>
+<div style="  padding-top: 5px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  padding-left: 20px;">
+<div class="container">
+    <p style="color:white;" >Rating :- {{item.rating}} Stars<br>
+    {{item.review_str}}</p>
+</div></div>.
 {% endfor %}
 
 
