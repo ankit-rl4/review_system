@@ -17,10 +17,10 @@ class review(db.Model):
     review_str = db.Column(db.String(300))
     time = db.Column(db.String(300))
 
-    def __init_(self, rating, review_str,time):
+    def __init_(self, rating, review_str, time):
         self.rating = rating
         self.review_str = review_str
-        self.time=time
+        self.time = time
 
 
 @app.route("/")
@@ -33,10 +33,14 @@ def submit():
     if request.method == "POST":
 
         Review = request.form["text"]
-        rating = request.form.getlist("rate")
+        try:
+            rating = request.form.getlist("rate")
+            rating = int(rating[0])
+        except:
+            return render_template("index.html", data=True)
         dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
         rating = int(rating[0])
-        dreview = review(rating=rating, review_str=Review,time=dt_string)
+        dreview = review(rating=rating, review_str=Review, time=dt_string)
         db.session.add(dreview)
         db.session.commit()
 
