@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
-now = datetime.now()
 app = Flask(__name__)
 app.static_folder = 'static'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///ankit.sqlite3'
@@ -37,6 +36,7 @@ def submit():
             rating = request.form.getlist("rate")
         except:
             return render_template("index.html", data=True)
+        now = datetime.now()
         dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
         rating = int(rating[0])
         dreview = review(rating=rating, review_str=Review, time=dt_string)
