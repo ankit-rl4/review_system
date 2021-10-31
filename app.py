@@ -35,7 +35,6 @@ def submit():
         Review = request.form["text"]
         try:
             rating = request.form.getlist("rate")
-            rating = int(rating[0])
         except:
             return render_template("index.html", data=True)
         dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
