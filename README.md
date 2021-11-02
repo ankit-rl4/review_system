@@ -5,8 +5,9 @@ You can add your reviews here regarding the particular question asked. As you ru
 can give the ratings and add the description for the same .After the sucessful submission of the response by clicking on submit button the message will be displayed "Submitted Sucessfully".
 
 # How to run it ?
-Clone the repository on your laptop/PC.Then open the folder in suitable code editor(Eg: Visual Studio code ,Sublime Text,etc).
-Run the app.py file present in the folder.The link will be displayed in your terminal just click on that link which will run it.
+To run the project follow these steps:< /br>
+1]Clone the repository on your laptop/PC.< /br> 2]Open the folder in suitable code editor(Eg: Visual Studio code ,Sublime Text,etc).< /br>
+3]Run the app.py file present in the folder.< /br>4]The link will be displayed in your terminal just click on that link which will run it.
 
 # Admin login
 Follow the steps given below:</br>
