@@ -9,9 +9,8 @@ Clone the repository on your laptop/PC.Then open the folder in suitable code edi
 Run the app.py file present in the folder.The link will be displayed in your terminal just click on that link which will run it.
 
 # Admin login
-
-Firstly,run the project and click on the link provided in terminal.Then go to the  localhost/admin and Type username and password as "admin"(It will ask for the username and password) and
-At this page you will be able to see all the feedbacks and reviews which have been submitted.
+Follow the steps given below:</br>
+1]Run the project.</br> 2] Click on the link provided in terminal.</br> 3]Go to the  localhost/admin and Type username and password as "admin"(It will ask for the username and password).</br> 4]At this page you will be able to see all the feedbacks and reviews which have been submitted.
 
 # Note
 
