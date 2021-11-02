@@ -10,14 +10,8 @@ Run the app.py file present in the folder.The link will be displayed in your ter
 
 # Admin login
 
-go to localhost/admin
-use admin as username and password
-then u can see a list of all the reviews 
-1: Run the project.
-2: Click on the link provided in terminal.
-3: Go to the  localhost/admin .
-4: Type username and password as "admin"(It will ask for the username and password)
-5: At this page you will be able to see all the feedbacks and reviews which have been submitted.
+Firstly,run the project and click on the link provided in terminal.Then go to the  localhost/admin and Type username and password as "admin"(It will ask for the username and password) and
+At this page you will be able to see all the feedbacks and reviews which have been submitted.
 
 # Note
 
